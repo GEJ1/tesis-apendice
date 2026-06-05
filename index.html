@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apéndice A · Repositorios y Recursos Digitales · Tesis Doctoral G. E. Juantorena</title>
+<meta name="description" content="Repositorios de código abierto desarrollados y utilizados en la tesis doctoral de Gustavo E. Juantorena (UBA).">
+<style>
+  :root {
+    --bg: #f4f5f7;
+    --card: #ffffff;
+    --ink: #1c2530;
+    --muted: #5b6877;
+    --accent: #1f6feb;
+    --accent-soft: #e7f0ff;
+    --border: #e2e6ec;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  header { margin-bottom: 2.5rem; }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 0.5rem;
+  }
+  h1 { font-size: 1.85rem; margin: 0 0 0.6rem; line-height: 1.25; }
+  .lede { color: var(--muted); font-size: 1.02rem; margin: 0; }
+  .author { margin-top: 1rem; font-size: 0.92rem; color: var(--muted); }
+  .author strong { color: var(--ink); }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.4rem 1.5rem;
+    margin-bottom: 1.1rem;
+    transition: box-shadow .18s ease, transform .18s ease;
+  }
+  .card:hover { box-shadow: 0 6px 24px rgba(28,37,48,.08); transform: translateY(-2px); }
+  .card h2 {
+    font-size: 1.18rem;
+    margin: 0 0 0.3rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.55rem;
+  }
+  .tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 0.12rem 0.5rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .card p { margin: 0.4rem 0 0.9rem; color: var(--muted); font-size: 0.96rem; }
+  .links { display: flex; flex-direction: column; gap: 0.45rem; }
+  .links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.94rem;
+    font-weight: 500;
+    word-break: break-all;
+  }
+  .links a:hover { text-decoration: underline; }
+  .links a::before { content: "↗"; font-size: 0.85rem; opacity: .7; }
+  .link-label { color: var(--ink); font-weight: 600; margin-right: 0.15rem; }
+
+  footer {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  @media (max-width: 480px) {
+    h1 { font-size: 1.5rem; }
+    .card { padding: 1.15rem 1.15rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Apéndice A · Tesis Doctoral</p>
+    <h1>Repositorios de código y recursos digitales</h1>
+    <p class="lede">Repositorios de código abierto desarrollados, mejorados o utilizados extensivamente durante esta tesis. Cada enlace apunta a la versión estable del código fuente y su documentación técnica.</p>
+    <p class="author"><strong>Gustavo E. Juantorena</strong> · Universidad de Buenos Aires · Laboratorio de Inteligencia Artificial Aplicada (LIAA)</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>A.1 · Plataforma DataPruebas <span class="tag">Caps. 3, 4 y 5</span></h2>
+      <p>Infraestructura para la recolección de datos multimodales en entornos web. Sistema de gestión de participantes, integración de tareas cognitivas y almacenamiento persistente de trayectorias.</p>
+      <div class="links">
+        <a href="https://github.com/GEJ1/datapruebas"><span class="link-label">Repositorio:</span> github.com/GEJ1/datapruebas</a>
+        <a href="https://datapruebas.org/"><span class="link-label">Plataforma:</span> datapruebas.org</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>A.2 · cTMT-online (jsPsych) <span class="tag">Cap. 4</span></h2>
+      <p>Trail Making Test para entornos web no supervisados. Captura de trayectorias del cursor, fase de entrenamiento asistida y estandarización mediante <em>virtual-chinrest</em>.</p>
+      <div class="links">
+        <a href="https://www.jspsych.org/latest/plugins/virtual-chinrest/"><span class="link-label">Plugin oficial:</span> jspsych.org · virtual-chinrest</a>
+        <a href="https://github.com/GEJ1/tmt-online"><span class="link-label">Repositorio de tareas:</span> github.com/GEJ1/tmt-online</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>A.3 · Biblioteca NeuroTask <span class="tag">Cap. 4</span></h2>
+      <p>Librería en Python para el preprocesamiento de series temporales conductuales y la extracción de características cinemáticas de alta resolución. Interpolación de señales, segmentación de estados basada en velocidad (Búsqueda, Desplazamiento, Vacilación) y cálculo de métricas SHAP.</p>
+      <div class="links">
+        <a href="https://github.com/GEJ1/neurotask"><span class="link-label">Repositorio:</span> github.com/GEJ1/neurotask</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>A.4 · Seguimiento ocular web · WebGazer <span class="tag">Cap. 5</span></h2>
+      <p>Modificaciones y validaciones técnicas sobre el sistema de eye-tracking remoto por cámara web. Migración a TensorFlow.js (Facemesh), detección de parpadeos (EAR) y calibración explícita de 9 puntos.</p>
+      <div class="links">
+        <a href="https://github.com/NeuroLIAA/WebGazer"><span class="link-label">Núcleo WebGazer:</span> github.com/NeuroLIAA/WebGazer</a>
+        <a href="https://github.com/GEJ1/et_webcam_experiments"><span class="link-label">Validación antisacadas:</span> github.com/GEJ1/et_webcam_experiments</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Tesis Doctoral · Gustavo E. Juantorena · Facultad de Ciencias Exactas y Naturales, UBA · 2026
+  </footer>
+</div>
+</body>
+</html>

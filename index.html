@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apéndice A · Repositorios y Recursos Digitales · Tesis Doctoral G. E. Juantorena</title>
+  <title>Apéndices A y B · Repositorios, Recursos Digitales y Datos · Tesis Doctoral G. E. Juantorena</title>
   <meta name="description"
-    content="Repositorios de código abierto desarrollados y utilizados en la tesis doctoral de Gustavo E. Juantorena (UBA).">
+    content="Repositorios de código, recursos digitales y datos desarrollados y utilizados en la tesis doctoral de Gustavo E. Juantorena (UBA).">
   <style>
     :root {
       --bg: #f4f5f7;
@@ -69,6 +69,23 @@
 
     .author strong {
       color: var(--ink);
+    }
+
+    .group-title {
+      font-size: 1.32rem;
+      margin: 2.2rem 0 1.1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent-soft);
+    }
+
+    .group-title:first-child {
+      margin-top: 0;
+    }
+
+    .group-intro {
+      color: var(--muted);
+      font-size: 0.96rem;
+      margin: -0.5rem 0 1.3rem;
     }
 
     .card {
@@ -166,81 +183,114 @@
 <body>
   <div class="wrap">
     <header>
-      <p class="eyebrow">Apéndice A · Tesis Doctoral</p>
-      <h1>Repositorios de código y recursos digitales</h1>
-      <p class="lede">Repositorios de código abierto desarrollados, mejorados o utilizados extensivamente durante esta
-        tesis. Cada enlace apunta a la versión estable del código fuente y su documentación técnica.</p>
+      <p class="eyebrow">Apéndices A y B · Tesis Doctoral</p>
+      <h1>Repositorios de código, recursos digitales y datos</h1>
+      <p class="lede">Herramientas de software desarrolladas o mejoradas durante esta tesis y repositorios de datos
+        asociados. Cada entrada enlaza al recurso correspondiente: código fuente, plataforma, documentación técnica o
+        conjunto de datos.</p>
       <p class="author"><strong>Gustavo E. Juantorena</strong> · Universidad de Buenos Aires · Laboratorio de
         Inteligencia Artificial Aplicada (LIAA)</p>
     </header>
 
     <main>
+      <h2 class="group-title">Apéndice A · Repositorios de código y recursos digitales</h2>
+
       <section class="card">
         <h2>A.1 · Plataforma DataPruebas <span class="tag">Caps. 4, 5 y 6</span></h2>
-        <p>Infraestructura para la recolección de datos multimodales en entornos web. Sistema de gestión de
-          participantes, integración de tareas cognitivas y almacenamiento persistente de trayectorias.</p>
+        <p>Infraestructura para la recolección de datos multimodales en entornos web. Incluye el sistema de gestión de
+          participantes, la integración de tareas cognitivas y el almacenamiento persistente.</p>
         <div class="links">
           <a href="https://datapruebas.org/"><span class="link-label">Plataforma:</span> datapruebas.org</a>
         </div>
       </section>
 
-
       <section class="card">
-        <h2>A.2 · Implementación del Virtual Chin Rest de Li et. al 2020 <span class="tag">Cap. 5 y 6</span></h2>
-        <p>Permite medir la distancia entre el participante y la pantalla. También permite ajustar el contenido de la
-          página
-          de jsPsych a una dimensión física conocida (por ejemplo, garantizando que un estímulo de 200 píxeles de ancho
-          tenga 2,2 cm
-          de ancho en el monitor del participante).</p>
+        <h2>A.2 · Implementación del Virtual Chinrest (Li et al., 2020) <span class="tag">Caps. 5 y 6</span></h2>
+        <p>Permite estimar la distancia entre el participante y la pantalla, y ajustar el contenido de la página de
+          jsPsych a una dimensión física conocida (por ejemplo, garantizando que un estímulo de 200 píxeles de ancho
+          mida 2,2 cm en el monitor del participante).</p>
         <div class="links">
-          <a href="https://www.jspsych.org/latest/plugins/virtual-chinrest/"><span class="link-label">Plugin
+          <a href="https://www.jspsych.org/v8/plugins/virtual-chinrest/"><span class="link-label">Plugin
               oficial:</span> jspsych.org · virtual-chinrest</a>
         </div>
       </section>
 
       <section class="card">
         <h2>A.3 · Repositorio de tareas cognitivas implementadas en jsPsych <span class="tag">Cap. 5</span></h2>
-        <p>Go/NoGo, Change Detection Task y Trail Making Test, este último con su propio plugin de jsṔsych que permite
-          armar distintas versiones</p>
+        <p>Go/No-Go, Change Detection Task y Trail Making Test, este último con su propio plugin de jsPsych que permite
+          armar distintas versiones de la tarea. La cuarta tarea utilizada en el Capítulo 5 (Stop Signal Task) fue
+          integrada a partir de la implementación de código abierto STOP-IT (github.com/fredvbrug/STOP-IT).</p>
         <div class="links">
           <a href="https://github.com/GEJ1/Neuro_psych_tasks/"><span class="link-label">Repositorio de tareas:</span>
-            https://github.com/GEJ1/Neuro_psych_tasks/</a>
+            github.com/GEJ1/Neuro_psych_tasks</a>
+          <a href="https://github.com/fredvbrug/STOP-IT"><span class="link-label">STOP-IT:</span>
+            github.com/fredvbrug/STOP-IT</a>
         </div>
       </section>
 
       <section class="card">
         <h2>A.4 · Biblioteca NeuroTask <span class="tag">Caps. 3 y 5</span></h2>
         <p>Librería en Python para el preprocesamiento de series temporales conductuales y la extracción de
-          características cinemáticas de alta resolución. Interpolación de señales, segmentación de estados basada en
-          velocidad (Búsqueda, Desplazamiento, Vacilación) y cálculo de métricas SHAP.</p>
+          características cinemáticas de alta resolución. Incluye interpolación de señales y segmentación de estados
+          basada en velocidad (Búsqueda, Desplazamiento, Vacilación).</p>
         <div class="links">
           <a href="https://github.com/NeuroLIAA/neurotask"><span class="link-label">Repositorio:</span>
-            https://github.com/NeuroLIAA/neurotask</a>
+            github.com/NeuroLIAA/neurotask</a>
         </div>
       </section>
 
       <section class="card">
-        <h2>A.5 · Biblioteca Pyxations <span class="tag">Cap. 5</span></h2>
-        <p>Pyxations es una biblioteca de Python diseñada para analizar datos de seguimiento ocular, tanto si se trabaja
-          con datos brutos como
-          con conjuntos de datos procesados. Ayuda a
-          investigadores y desarrolladores a extraer información útil a partir de movimientos oculares complejos
-          utilizando el ecosistema de Python.</p>
+        <h2>A.5 · Biblioteca Pyxations <span class="tag">Cap. 6</span></h2>
+        <p>Biblioteca en Python para el análisis de datos de seguimiento ocular, tanto en datos crudos como en
+          conjuntos de datos procesados. Facilita la extracción de información a partir de movimientos oculares
+          complejos dentro del ecosistema de Python. Disponible en PyPI (<code>pip install pyxations</code>).</p>
         <div class="links">
           <a href="https://github.com/NeuroLIAA/pyxations/"><span class="link-label">Repositorio:</span>
-            https://github.com/NeuroLIAA/pyxations/</a>
+            github.com/NeuroLIAA/pyxations</a>
+          <a href="https://neuroliaa.github.io/pyxations/"><span class="link-label">Documentación:</span>
+            neuroliaa.github.io/pyxations</a>
         </div>
       </section>
 
       <section class="card">
-        <h2>A.6 · Seguimiento ocular web · WebGazer <span class="tag">Cap. 6</span></h2>
-        <p>Modificaciones y validaciones técnicas sobre el sistema de eye-tracking remoto por cámara web. Migración a
-          TensorFlow.js (Facemesh), detección de parpadeos (EAR) y calibración explícita de 9 puntos.</p>
+        <h2>A.6 · Web Eye-Tracker: seguimiento ocular por cámara web <span class="tag">Cap. 6</span></h2>
+        <p>Prototipo de eye-tracking remoto por cámara web, construido en torno a la tarea de antisacadas e integrado a
+          jsPsych. Incluye las modificaciones técnicas sobre WebGazer: la migración a TensorFlow.js (Face mesh), la
+          detección de parpadeos (EAR) y la calibración explícita de 9 puntos.</p>
         <div class="links">
+          <a href="https://github.com/agustin-penas/rastreador-ocular"><span class="link-label">Prototipo (sistema de
+              experimentos):</span> github.com/agustin-penas/rastreador-ocular</a>
           <a href="https://github.com/NeuroLIAA/WebGazer"><span class="link-label">Núcleo WebGazer:</span>
             github.com/NeuroLIAA/WebGazer</a>
-          <a href="https://github.com/GEJ1/et_webcam_experiments"><span class="link-label">Validación
-              antisacadas:</span> github.com/GEJ1/et_webcam_experiments</a>
+        </div>
+      </section>
+
+      <h2 class="group-title">Apéndice B · Repositorios de datos</h2>
+
+      <section class="card">
+        <h2>B.1 · Datos del cTMT en pacientes con DCL <span class="tag">Cap. 3</span></h2>
+        <p>Trayectorias del cursor y evaluaciones neuropsicológicas de la cohorte de pacientes con deterioro cognitivo
+          leve y controles.</p>
+        <div class="links">
+          <a href="https://osf.io/nm9xy/"><span class="link-label">Repositorio (OSF):</span> osf.io/nm9xy</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>B.2 · Datos del cTMT online <span class="tag">Cap. 5</span></h2>
+        <p>Trayectorias del cursor y desempeño en las tareas cognitivas recolectadas en el estudio online a gran
+          escala.</p>
+        <div class="links">
+          <a href="https://osf.io/9rnp4/"><span class="link-label">Repositorio (OSF):</span> osf.io/9rnp4</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>B.3 · Datos de la tarea de antisacadas <span class="tag">Cap. 6</span></h2>
+        <p>Datos anonimizados del experimento de seguimiento ocular web (prosacadas y antisacadas).</p>
+        <div class="links">
+          <a href="https://github.com/GEJ1/et_webcam_experiments/tree/main/antisaccade_experiment/raw_data"><span
+              class="link-label">Repositorio (GitHub):</span> github.com/GEJ1/et_webcam_experiments</a>
         </div>
       </section>
     </main>
